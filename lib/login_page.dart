@@ -1,4 +1,6 @@
+import 'package:booking_app/components/button_auth_component.dart';
 import 'package:booking_app/components/form_auth_component.dart';
+import 'package:booking_app/components/provider_button_component.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -87,6 +89,32 @@ class LoginPage extends StatelessWidget {
                           ))
                     ],
                   ),
+                ),
+                const SizedBox(height: 20),
+                ButtonAuthComp(
+                  title: 'Sign In',
+                  onPress: () {},
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 30),
+                  child: Text(
+                    'OR',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey),
+                  ),
+                ),
+                ProviderLogButton(
+                  title: 'Login with Google',
+                  logoPath: 'assets/google.png',
+                  onPress: () {},
+                ),
+                const SizedBox(height: 20),
+                ProviderLogButton(
+                  title: 'Login with Facebook',
+                  logoPath: 'assets/facebook.png',
+                  onPress: () {},
                 )
               ],
             ),

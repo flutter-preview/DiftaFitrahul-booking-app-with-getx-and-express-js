@@ -19,3 +19,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/Group.png
+    - assets/google.png
+    - assets/facebook.png
