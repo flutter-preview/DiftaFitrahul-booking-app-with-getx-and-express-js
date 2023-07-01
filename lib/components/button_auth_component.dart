@@ -4,13 +4,11 @@ class ButtonAuthComp extends StatelessWidget {
   final String title;
   final VoidCallback onPress;
 
-  const ButtonAuthComp({super.key,
-  required this.title,
-  required this.onPress
-  });
+  const ButtonAuthComp({super.key, required this.title, required this.onPress});
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.sizeOf(context).height;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: ElevatedButton(
@@ -24,11 +22,12 @@ class ButtonAuthComp extends StatelessWidget {
               children: [
                 Align(
                     child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 25.0),
+                  padding: EdgeInsets.symmetric(
+                      vertical: screenHeight < 880 ? 22 : 25.0),
                   child: Text(
                     title,
-                    style:
-                        const TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 )),
                 Align(

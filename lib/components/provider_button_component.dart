@@ -4,14 +4,16 @@ class ProviderLogButton extends StatelessWidget {
   final String title;
   final String logoPath;
   final VoidCallback onPress;
-  const ProviderLogButton({super.key,
-  required this.title,
-  required this.logoPath,
-  required this.onPress,
+  const ProviderLogButton({
+    super.key,
+    required this.title,
+    required this.logoPath,
+    required this.onPress,
   });
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.sizeOf(context).height;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: ElevatedButton(
@@ -27,14 +29,14 @@ class ProviderLogButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 35,
-                  width: 35,
+                  height: screenHeight < 880 ? 29 : 35,
+                  width: screenHeight < 880 ? 29 : 35,
                   child: Image.asset(logoPath),
                 ),
                 const SizedBox(
                   width: 20,
                 ),
-                 Text(
+                Text(
                   title,
                   style: TextStyle(
                       fontSize: 16,
