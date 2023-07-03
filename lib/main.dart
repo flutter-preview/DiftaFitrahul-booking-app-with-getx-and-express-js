@@ -1,4 +1,5 @@
-import 'package:booking_app/login_page.dart';
+import 'package:booking_app/page/login_page.dart';
+import 'package:booking_app/page/register_page.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,6 @@ class MainApp extends StatelessWidget {
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
-        home: const LoginPage());
+        home: const RegisterPage());
   }
 }

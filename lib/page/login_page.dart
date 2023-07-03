@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: LayoutBuilder(
-              builder: (context, constraints) => SingleChildScrollView(
+              builder: (_, constraints) => SingleChildScrollView(
                     child: ConstrainedBox(
                       constraints:
                           BoxConstraints(minHeight: constraints.maxHeight),
